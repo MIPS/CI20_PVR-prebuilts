@@ -1,0 +1,13 @@
+[Unit]
+Description=PoverVR gpu driver
+
+[Service]
+Type=forking
+ExecStartPre=/sbin/modprobe pvrsrvkm
+ExecStart=/usr/bin/pvrsrvctl --start
+RemainAfterExit=yes
+
+ExecStop=/usr/bin/pvrsrvctl --stop
+
+[Install]
+WantedBy=multi-user.target

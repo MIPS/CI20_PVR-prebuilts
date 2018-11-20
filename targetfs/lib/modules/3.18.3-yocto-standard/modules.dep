@@ -1,0 +1,2 @@
+/lib/modules/3.18.3-yocto-standard/extra/pvrsrvkm.ko:
+/lib/modules/3.18.3-yocto-standard/extra/bc_example.ko: /lib/modules/3.18.3-yocto-standard/extra/pvrsrvkm.ko
