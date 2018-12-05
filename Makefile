@@ -1,5 +1,7 @@
 DESTDIR ?= ${DISCIMAGE}
-SRCDIR = ./targetfs
+SRCDIR_KM = ./sgx_km
+SRCDIR_UM = ./sgx_um
+SRCDIR_DEV = ./sgx_dev
 
 prefix = /usr
 libdir = ${prefix}/lib
@@ -14,9 +16,11 @@ install:
 	mkdir -p ${DESTDIR}${libdir}
 	mkdir -p ${DESTDIR}${incdir}
 	mkdir -p ${DESTDIR}${bindir}
-	mkdir -p ${DESTDIR}${localdir}/XSGX
 	mkdir -p ${DESTDIR}${native_libdir}
-	cp -ar ${SRCDIR}/usr/lib/* ${DESTDIR}${libdir}
-	cp -ar ${SRCDIR}/usr/include/* ${DESTDIR}${incdir}
-	cp -ar ${SRCDIR}/usr/bin/* ${DESTDIR}${bindir}
-	cp -ar ${SRCDIR}/lib/* ${DESTDIR}${native_libdir}
+	mkdir -p ${DESTDIR}${localdir}/XSGX
+	cp -ar ${SRCDIR_UM}${libdir}/* ${DESTDIR}${libdir}
+	cp -ar ${SRCDIR_UM}${bindir}* ${DESTDIR}${bindir}
+	cp -ar ${SRCDIR_UM}${native_libdir}/* ${DESTDIR}${native_libdir}
+	cp -ar ${SRCDIR_KM}${native_libdir}/* ${DESTDIR}${native_libdir}
+	cp -ar ${SRCDIR_DEV}${incdir}/* ${DESTDIR}${incdir}
+	cp -ar ${SRCDIR_DEV}${libdir}/* ${DESTDIR}${libdir}

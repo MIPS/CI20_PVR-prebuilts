@@ -1,8 +1,26 @@
 
 PVR SGX prebuilts for CI20
+==========================
+
+
+About
 --------------------------
 
 Version: 1.15@4568187
 
 Window system: wayland
 
+
+License
+--------------------------
+
+This project consists of several components. Different copyrights and licenses
+apply to different components.
+
+Component Licenses:
+sgx_um	- User space driver prebuilts are licenesed under Imagination
+	Technologies Limited license,
+sgx_dev	- Headers and .pc files are licensed under: BSD-3-Clause, MIT
+	or SGI-B-2.0 license,
+#FIXME
+sgx_km	- Kernel module is licensed under: MIT, GPLv2 or Dual MIT/GPLv2 license?
