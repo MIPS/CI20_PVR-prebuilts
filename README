@@ -19,8 +19,7 @@ apply to different components.
 
 Component Licenses:
 sgx_um	- User space driver prebuilts are licenesed under Imagination
-	Technologies Limited license,
+	  Technologies Limited license,
 sgx_dev	- Headers and .pc files are licensed under: BSD-3-Clause, MIT
-	or SGI-B-2.0 license,
-#FIXME
-sgx_km	- Kernel module is licensed under: MIT, GPLv2 or Dual MIT/GPLv2 license?
+	  or SGI-B-2.0 license,
+sgx_km	- Kernel module is licensed under Dual MIT/GPLv2 license.
