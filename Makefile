@@ -19,7 +19,7 @@ install:
 	mkdir -p ${DESTDIR}${native_libdir}
 	mkdir -p ${DESTDIR}${localdir}/XSGX
 	cp -ar ${SRCDIR_UM}${libdir}/* ${DESTDIR}${libdir}
-	cp -ar ${SRCDIR_UM}${bindir}* ${DESTDIR}${bindir}
+	cp -ar ${SRCDIR_UM}${bindir}/* ${DESTDIR}${bindir}
 	cp -ar ${SRCDIR_UM}${native_libdir}/* ${DESTDIR}${native_libdir}
 	cp -ar ${SRCDIR_KM}${native_libdir}/* ${DESTDIR}${native_libdir}
 	cp -ar ${SRCDIR_DEV}${incdir}/* ${DESTDIR}${incdir}
